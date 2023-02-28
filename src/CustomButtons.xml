@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="mxtechies.custombuttons.CustomButtons"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
+    <name>Custom Buttons</name>
+    <description>Buttons with many configurable hover effects</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="General">
+            <property key="textButton" type="string" required="true">
+                <caption>Button Caption</caption>
+                <description>Text to be displayed inside the button.</description>
+            </property>
+            <property key="classButton" type="enumeration" defaultValue="fill_Effect">
+                <caption>Effect</caption>
+                <description>Select the hover effect to be applied to the button.</description>
+                <enumerationValues>
+                    <enumerationValue key="plain">Plain</enumerationValue>
+                    <enumerationValue key="fill_Effect">Fill</enumerationValue>
+                    <enumerationValue key="up_Effect">Fill Up</enumerationValue>
+                    <enumerationValue key="close_Effect">Close</enumerationValue>
+                    <enumerationValue key="raise_Effect">Raise</enumerationValue>
+                    <enumerationValue key="slide_Effect">Slide</enumerationValue>
+                    <enumerationValue key="wobble_HorizontalEffect">Wobble Horizontal</enumerationValue>
+                    <enumerationValue key="wobble_VerticalEffect">Wobble Vertical</enumerationValue>
+                    <enumerationValue key="wobble_TopEffect">Wobble Top</enumerationValue>
+                    <enumerationValue key="wobble_BottomEffect">Wobble Bottom</enumerationValue>
+                    <enumerationValue key="pulse_Effect">Pulse</enumerationValue>
+                    <enumerationValue key="backflip_Effect">Flip</enumerationValue>
+                    <enumerationValue key="Spin_Effect">Spin</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Styles">
+            <property key="textColor" type="string" required="false">
+                <caption>Text Color</caption>
+                <description>Color for the button Caption.</description>
+            </property>
+            <property key="borderColor" type="string" required="false">
+                <caption>Border Color</caption>
+                <description>Border Color for the button.</description>
+            </property>
+            <property key="fillColor" type="string" required="false">
+                <caption>Effect Color</caption>
+                <description>Color used for effect.</description>
+            </property>
+        </propertyGroup>
+
+        <propertyGroup caption="Action">
+            <property key="buttonAction" type="action">
+                <caption>On click</caption>
+                <description>Action to be performed when button is clicked</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

@@ -1,0 +1,209 @@
+.customButton {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    transition: 0.4s;
+    color: var(--txtCol);
+    border-color: var(--bCol);
+}
+
+.fill_Effect:hover {
+    box-shadow: inset 0 0 0 calc(var(--heigh) / 2) var(--fCol);
+}
+
+.close_Effect:hover {
+    box-shadow: inset calc(-1 * calc(var(--widt) / 2)) 0 0 0 var(--fCol), inset calc(var(--widt) / 2) 0 0 0 var(--fCol);
+}
+
+.up_Effect:hover {
+    box-shadow: inset 0 calc(-1 * var(--heigh)) 0 0 var(--fCol);
+}
+
+.slide_Effect:hover {
+    box-shadow: inset var(--widt) 0 0 0 var(--fCol);
+}
+
+.raise_Effect:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--fCol);
+    transform: translateY(-0.25em);
+}
+
+.wobble_HorizontalEffect:hover {
+    background-color: var(--fCol);
+    animation-name: wobble-horizontal;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+.wobble_VerticalEffect:hover {
+    background-color: var(--fCol);
+    animation-name: wobble-vertical;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+.wobble_TopEffect:hover {
+    background-color: var(--fCol);
+    transform-origin: 0 100%;
+    animation-name: wobble-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.wobble_BottomEffect:hover {
+    background-color: var(--fCol);
+    transform-origin: 100% 0;
+    animation-name: wobble-bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.pulse_Effect:hover {
+    background-color: var(--fCol);
+    animation-name: pulsar;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.backflip_Effect:hover {
+    transition: 0.5s;
+    background-color: var(--fCol);
+    -webkit-transform: rotateX(360deg);
+    -ms-transform: rotateX(360deg);
+    -o-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+}
+
+.Spin_Effect:hover {
+    transition: 0.5s;
+    background-color: var(--fCol);
+    -webkit-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+}
+
+@keyframes wobble-horizontal {
+    16.65% {
+        transform: translateX(8px);
+    }
+
+    33.3% {
+        transform: translateX(-6px);
+    }
+
+    49.95% {
+        transform: translateX(4px);
+    }
+
+    66.6% {
+        transform: translateX(-2px);
+    }
+
+    83.25% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes wobble-vertical {
+    16.65% {
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        transform: translateY(1px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes wobble-top {
+    16.65% {
+        transform: skew(-12deg);
+    }
+
+    33.3% {
+        transform: skew(10deg);
+    }
+
+    49.95% {
+        transform: skew(-6deg);
+    }
+
+    66.6% {
+        transform: skew(4deg);
+    }
+
+    83.25% {
+        transform: skew(-2deg);
+    }
+
+    100% {
+        transform: skew(0);
+    }
+}
+
+@keyframes wobble-bottom {
+    16.65% {
+        transform: skew(-12deg);
+    }
+
+    33.3% {
+        transform: skew(10deg);
+    }
+
+    49.95% {
+        transform: skew(-6deg);
+    }
+
+    66.6% {
+        transform: skew(4deg);
+    }
+
+    83.25% {
+        transform: skew(-2deg);
+    }
+
+    100% {
+        transform: skew(0);
+    }
+}
+
+@keyframes pulsar {
+    25% {
+        transform: scale(1.1);
+    }
+
+    75% {
+        transform: scale(0.9);
+    }
+}
+
+.customButton:active,
+.customButton:focus {
+    opacity: 0.8;
+}
